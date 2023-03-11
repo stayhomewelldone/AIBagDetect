@@ -15,6 +15,7 @@ let punten = 0
 puntenContainer.textContent = punten
 let classifier
 let synth = window.speechSynthesis
+console.log = function() {}
 
 htplayButton.addEventListener("click", howtoplay);
 startButton.addEventListener("click", start);
