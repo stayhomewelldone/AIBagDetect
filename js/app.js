@@ -1,19 +1,20 @@
 // Initialize the Image Classifier method with MobileNet
-document.querySelector(
-  "body").style.visibility = "hidden";
-  document.querySelector(
-    "#loader").style.visibility = "visible";
-
+let loader = document.querySelector("#loader")
+let body = document.querySelector("body")
+body.style.visibility = "hidden";
+loader.style.visibility = "visible";
 const image = document.getElementById('image')
 const fileButton = document.getElementById("file")
 const htplayButton = document.getElementById("htplay")
 const gameDiv = document.getElementById("game")
 const intro = document.getElementById("intro")
 const startButton = document.getElementById("start")
-const puntenContainer = document.getElementById("puntenoutput");
-const mainContainer = document.getElementById("result");
+const puntenContainer = document.getElementById("puntenoutput")
+const mainContainer = document.getElementById("result")
 const uploadDiv = document.getElementById("upload")
 const voiceButton = document.getElementById("voice")
+
+
 let punten = 0
 puntenContainer.textContent = punten
 let classifier
@@ -58,10 +59,8 @@ function howtoplay(){
 }
 function model2Loaded(){
   console.log("Imageclassifier also Loaded!")
-  document.querySelector(
-    "#loader").style.display = "none";
-    document.querySelector(
-    "body").style.visibility = "visible";
+  loader.style.display = "none";
+  body.style.visibility = "visible";
 }
 
 // When the model is loaded
