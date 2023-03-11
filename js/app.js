@@ -1,9 +1,6 @@
 // Initialize the Image Classifier method with MobileNet
-
-const featureExtractor = ml5.featureExtractor('MobileNet', modelLoaded)
-const imageClassifier = ml5.imageClassifier('MobileNet', model2Loaded)
 const image = document.getElementById('image')
-const fileButton = document.querySelector("#file")
+const fileButton = document.getElementById("file")
 const htplayButton = document.getElementById("htplay")
 const gameDiv = document.getElementById("game")
 const intro = document.getElementById("intro")
@@ -11,19 +8,24 @@ const startButton = document.getElementById("start")
 const puntenContainer = document.getElementById("puntenoutput");
 const mainContainer = document.getElementById("result");
 const uploadDiv = document.getElementById("upload")
+const voiceButton = document.getElementById("voice")
 let punten = 0
 puntenContainer.textContent = punten
 let classifier
+const featureExtractor = ml5.featureExtractor('MobileNet', modelLoaded)
+const imageClassifier = ml5.imageClassifier('MobileNet', model2Loaded)
 let synth = window.speechSynthesis
-console.log = function() {}
-
-htplayButton.addEventListener("click", howtoplay);
+htplayButton.addEventListener("click", ()=>{
+  howtoplay();
+});
 startButton.addEventListener("click", start);
-
+voiceButton.addEventListener("click", ()=>{
+  speak("Make a picture of a shopping bag");
+  
+})
 fileButton.addEventListener("change", (event)=>{
     image.src = URL.createObjectURL(event.target.files[0])
 })
-image.addEventListener('load', () => userImageUploaded())
 
 
 
@@ -65,6 +67,7 @@ function customModelReady(){
 
   console.log('Custom model is ready!')
 }
+image.addEventListener('load', () => userImageUploaded())
 
 function userImageUploaded(){
     console.log("The image is now visible in the DOM")
@@ -84,7 +87,6 @@ function speak(text) {
 
 function getFalseResults(){
   imageClassifier.classify(document.getElementById('image'), (err, results) => {
-    const mainContainer = document.getElementById("result");
     mainContainer.innerHTML = "Doe beter boodschappen, dit is : " + results[0].label;
   }
   )
@@ -94,6 +96,7 @@ function getResults() {
     // Make a prediction with a selected image
     classifier.classify(document.getElementById('image'), (err, results) => {
       console.log(results);
+      
       
       if(results[0].confidence > 0.8 || results[1].confidence > 0.8)
       {mainContainer.innerHTML = "It is a : " + results[0].label;
@@ -115,6 +118,6 @@ function getResults() {
         
         
         }
-      
+      2
     });
 }
