@@ -22,6 +22,7 @@ startButton.addEventListener("click", start);
 fileButton.addEventListener("change", (event)=>{
     image.src = URL.createObjectURL(event.target.files[0])
 })
+image.addEventListener('load', () => userImageUploaded())
 
 
 
@@ -72,10 +73,10 @@ function customModelReady(){
 
   console.log('Custom model is ready!')
 }
-image.addEventListener('load', () => userImageUploaded())
 
 function userImageUploaded(){
     console.log("The image is now visible in the DOM")
+    alert("The image is now visible in the DOM")
     getResults()
 }
 
