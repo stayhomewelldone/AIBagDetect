@@ -55,20 +55,11 @@ function model2Loaded(){
 // When the model is loaded
 function modelLoaded() {
   console.log('Model Loaded!');
-  
-
-  startingApp()
   featureExtractor.load('./models/model.json', customModelReady)
   classifier = featureExtractor.classification(image, {numLabels: 3})
   
 }
 
-
-
-function startingApp(){
-  Notification.requestPermission()
-  new Notification("Starting the app")
-}
 function customModelReady(){
 
   console.log('Custom model is ready!')
@@ -125,6 +116,6 @@ function getResults() {
         
         
         }
-      2
+      
     });
 }
