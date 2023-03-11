@@ -1,26 +1,45 @@
 input[type="file"]::file-selector-button {
-    border: 2px solid #6c5ce7;
-    padding: 0.2em 0.4em;
-    border-radius: 0.2em;
-    background-color: #a29bfe;
-    transition: 1s;
-  }
-  
-  input[type="file"]::file-selector-button:hover {
-    background-color: #81ecec;
-    border: 2px solid #00cec9;
-  }
-  
-  body {
-    font-family: "Helvetica", Sans-Serif;
-    background-image: url("../pictures/background-image.jpeg");
-  }
+  border: 2px solid #6c5ce7;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+  background-color: #a29bfe;
+  transition: 1s;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: #81ecec;
+  border: 2px solid #00cec9;
+}
+
+body {
+  font-family: "Helvetica", Sans-Serif;
+  background-image: url("../pictures/background-image.jpeg");
+}
 
 #reload{
-    border: 2px solid #e75c7c;
-    padding: 0.2em 0.4em;
-    border-radius: 0.2em;
-    background-color: #f24e4e;
-    transition: 1s;
-  
+background-color: #b04d4d;
+
 }
+
+#loader {
+border: 12px solid #f3f3f3;
+border-radius: 50%;
+border-top: 12px solid #444444;
+width: 70px;
+height: 70px;
+animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+100% {
+    transform: rotate(360deg);
+}
+}
+
+.center {
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;

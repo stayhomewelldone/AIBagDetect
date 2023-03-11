@@ -1,4 +1,9 @@
 // Initialize the Image Classifier method with MobileNet
+document.querySelector(
+  "body").style.visibility = "hidden";
+  document.querySelector(
+    "#loader").style.visibility = "visible";
+
 const image = document.getElementById('image')
 const fileButton = document.getElementById("file")
 const htplayButton = document.getElementById("htplay")
@@ -53,6 +58,10 @@ function howtoplay(){
 }
 function model2Loaded(){
   console.log("Imageclassifier also Loaded!")
+  document.querySelector(
+    "#loader").style.display = "none";
+    document.querySelector(
+    "body").style.visibility = "visible";
 }
 
 // When the model is loaded
