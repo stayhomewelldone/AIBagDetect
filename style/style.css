@@ -17,7 +17,11 @@ body {
 }
 
 #reload{
-background-color: #b04d4d;
+  border: 2px solid #e75c6a;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+  background-color: #f87476;
+  transition: 1s;
 
 }
 
