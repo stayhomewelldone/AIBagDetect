@@ -1,8 +1,6 @@
 // Initialize the Image Classifier method with MobileNet
 let loader = document.querySelector("#loader")
 let body = document.querySelector("body")
-body.style.visibility = "hidden";
-loader.style.visibility = "visible";
 const image = document.getElementById('image')
 const fileButton = document.getElementById("file")
 const htplayButton = document.getElementById("htplay")
