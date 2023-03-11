@@ -19,8 +19,8 @@ let punten = 0
 puntenContainer.textContent = punten
 let classifier
 const featureExtractor = ml5.featureExtractor('MobileNet', modelLoaded)
-const imageClassifier = ml5.imageClassifier('MobileNet', model2Loaded)
 let synth = window.speechSynthesis
+const imageClassifier = ml5.imageClassifier('MobileNet', model2Loaded)
 htplayButton.addEventListener("click", ()=>{
   howtoplay();
 });
