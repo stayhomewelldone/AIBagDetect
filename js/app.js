@@ -25,7 +25,7 @@ htplayButton.addEventListener("click", ()=>{
 });
 startButton.addEventListener("click", start);
 voiceButton.addEventListener("click", ()=>{
-  speak("Make a picture of a shopping bag");
+  speak("Make a picture of a Dirk or Albert Heijn shopping bag");
   
 })
 fileButton.addEventListener("change", (event)=>{
@@ -96,7 +96,7 @@ function speak(text) {
 
 function getFalseResults(){
   imageClassifier.classify(document.getElementById('image'), (err, results) => {
-    mainContainer.innerHTML = "Doe beter boodschappen, dit is : " + results[0].label;
+    mainContainer.innerHTML = "False! Do better shopping, this is : " + results[0].label;
   }
   )
 }
@@ -111,13 +111,13 @@ function getResults() {
       {mainContainer.innerHTML = "It is a : " + results[0].label;
        punten += 1 
        puntenContainer.textContent = punten
-      speak("It is a : " + results[0].label);}
+      speak("Great job! It is a : " + results[0].label);}
       else
       {
         punten -= 1
         
         if(punten < 0 ){
-          mainContainer.innerHTML = "Je hebt verloren, start een nieuwe sessie door op de reload button te klikken"
+          mainContainer.innerHTML = "You have lost, start a new session by clicking on the reload button"
           uploadDiv.style.display = "none"
         }
         else {
