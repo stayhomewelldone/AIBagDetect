@@ -76,7 +76,7 @@ function customModelReady(){
 
 function userImageUploaded(){
     console.log("The image is now visible in the DOM")
-    alert("The image is now visible in the DOM")
+    window.alert("The image is now visible in the DOM")
     getResults()
 }
 
