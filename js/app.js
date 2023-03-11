@@ -11,7 +11,9 @@ const puntenContainer = document.getElementById("puntenoutput")
 const mainContainer = document.getElementById("result")
 const uploadDiv = document.getElementById("upload")
 const voiceButton = document.getElementById("voice")
-
+console.log = function(){
+  
+}
 
 let punten = 0
 puntenContainer.textContent = punten
