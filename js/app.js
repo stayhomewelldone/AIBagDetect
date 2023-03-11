@@ -103,7 +103,7 @@ function getResults() {
     // Make a prediction with a selected image
     classifier.classify(document.getElementById('image'), (err, results) => {
       console.log(results);
-      
+      window.alert(results[0].label)
       
       if(results[0].confidence > 0.8 || results[1].confidence > 0.8)
       {mainContainer.innerHTML = "It is a : " + results[0].label;
