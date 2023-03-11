@@ -46,4 +46,28 @@ top: 0;
 bottom: 0;
 left: 0;
 right: 0;
-margin: auto;
+margin: auto;}
+
+#htplay{
+  border: 2px solid #5ce798;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+  background-color: #2cce82;
+  transition: 1s;
+}
+
+#voice{
+  border: 2px solid #9f5ce7;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+  background-color: #ed59ed;
+  transition: 1s;
+}
+
+#start{
+  border: 2px solid #dee75c;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+  background-color: #c9f55b;
+  transition: 1s;
+}
